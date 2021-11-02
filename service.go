@@ -31,7 +31,7 @@ type (
 		Components            []*ServiceComponents   `json:"components"`
 		Powered               bool                   `json:"powered"`
 		NodeStates            []*NodeState           `json:"node_states"`
-		DiskSpaceMB           int                    `json:"disk_space_mb,omitempty"`
+		DiskSpaceMB           int                    `json:"disk_space_mb"`
 	}
 
 	// NodeState represents the Node State model on Aiven
@@ -162,6 +162,7 @@ type (
 		TerminationProtection bool                    `json:"termination_protection"`
 		UserConfig            map[string]interface{}  `json:"user_config,omitempty"`
 		ServiceIntegrations   []NewServiceIntegration `json:"service_integrations"`
+		DiskSpaceMB           int                     `json:"disk_space_mb"`
 	}
 
 	// UpdateServiceRequest are the parameters to update a Service.
@@ -174,6 +175,7 @@ type (
 		Powered               bool                   `json:"powered"`
 		TerminationProtection bool                   `json:"termination_protection"`
 		UserConfig            map[string]interface{} `json:"user_config,omitempty"`
+		DiskSpaceMB           int                    `json:"disk_space_mb"`
 	}
 
 	// ServiceResponse represents the response from Aiven after interacting with
