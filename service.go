@@ -162,7 +162,7 @@ type (
 		TerminationProtection bool                    `json:"termination_protection"`
 		UserConfig            map[string]interface{}  `json:"user_config,omitempty"`
 		ServiceIntegrations   []NewServiceIntegration `json:"service_integrations"`
-		DiskSpaceMB           int                     `json:"disk_space_mb"`
+		DiskSpaceMB           int                     `json:"disk_space_mb,omitempty"`
 	}
 
 	// UpdateServiceRequest are the parameters to update a Service.
@@ -175,7 +175,7 @@ type (
 		Powered               bool                   `json:"powered"`
 		TerminationProtection bool                   `json:"termination_protection"`
 		UserConfig            map[string]interface{} `json:"user_config,omitempty"`
-		DiskSpaceMB           int                    `json:"disk_space_mb"`
+		DiskSpaceMB           int                    `json:"disk_space_mb,omitempty"`
 	}
 
 	// ServiceResponse represents the response from Aiven after interacting with
