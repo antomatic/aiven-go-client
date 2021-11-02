@@ -31,6 +31,7 @@ type (
 		Components            []*ServiceComponents   `json:"components"`
 		Powered               bool                   `json:"powered"`
 		NodeStates            []*NodeState           `json:"node_states"`
+		DiskSpaceMB           int                    `json:"disk_space_mb,omitempty"`
 	}
 
 	// NodeState represents the Node State model on Aiven
