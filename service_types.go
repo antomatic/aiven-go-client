@@ -20,20 +20,19 @@ type (
 				MaxMemoryPercent int         `json:"max_memory_percent"`
 				BackupConfig     interface{} `json:"backup_config"`
 				Regions          map[string]struct {
-					DiskSpaceCapMB      int `json:"disk_space_cap_mb"`
-					DiskSpaceMB         int `json:"disk_space_mb"`
-					DiskSpaceStepMB     int `json:"disk_space_step_mb"`
-					DiskSpaceGBPriceUSD int `json:"disk_space_gb_price_usd"`
-					NodeCPUCount        int `json:"node_cpu_count"`
-					NodeMemoryMB        int `json:"node_memory_mb"`
-					PriceUSD            int `json:"price_usd"`
+					DiskSpaceCapMB      int    `json:"disk_space_cap_mb"`
+					DiskSpaceMB         int    `json:"disk_space_mb"`
+					DiskSpaceStepMB     int    `json:"disk_space_step_mb"`
+					DiskSpaceGBPriceUSD string `json:"disk_space_gb_price_usd"`
+					NodeCPUCount        int    `json:"node_cpu_count"`
+					NodeMemoryMB        int    `json:"node_memory_mb"`
+					PriceUSD            string `json:"price_usd"`
 				} `json:"regions"`
 			} `json:"service_plans"`
 		} `json:"service_types"`
 	}
 
-	// ServicesHandler is the client that interacts with the Service Types API
-	// endpoints on Aiven.
+	// ServicesTypesHandler is the client that interacts with the Service Types API endpoints on Aiven.
 	ServiceTypesHandler struct {
 		client *Client
 	}
